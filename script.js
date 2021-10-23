@@ -16,10 +16,10 @@ function setGradient() {
 	css.textContent = body.style.background + ";";
 }
 
-function gigi(){
-	color1.value = "#" + getRandomHex();	
+function randomize(){
+	color1.value = getRandomHex();	
 	setGradient();
-	color2.value = "#" + getRandomHex();
+	color2.value = getRandomHex();
 	setGradient();
 }
 
@@ -31,7 +31,7 @@ let getRandomHex = function(){
             let y = array[result];
             answer.push(y);    
     }
-    let finalAnswer = answer.toString().replace(/,/g, "");
+    let finalAnswer = "#" + (answer.toString().replace(/,/g, ""));
     return finalAnswer;
 }
 
@@ -40,4 +40,4 @@ color1.addEventListener("input", setGradient);
 
 color2.addEventListener("input", setGradient);
 
-button.addEventListener("click", gigi);
+button.addEventListener("click", randomize);
