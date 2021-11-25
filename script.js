@@ -21,6 +21,12 @@ function randomize(){
 	setGradient();
 	color2.value = getRandomHex();
 	setGradient();
+	button.style.background= 
+	"linear-gradient(to bottom right, " 
+	+ color1.value 
+	+ ", " 
+	+ color2.value 
+	+ ")";
 }
 
 let getRandomHex = function(){
